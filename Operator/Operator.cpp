@@ -163,11 +163,13 @@ int main()
 	d1.print();
 	d2.print();
 	d3.print();
-	cout << (d1 > d3) << endl;
+	/*cout << (d1 > d3) << endl;
 	cout << (d1 < d3) << endl;
 	cout << (d1 == d3) << endl;
 	cout << (d1 >= d3) << endl;
 	cout << (d1 <= d3) << endl;
-	cout << (d1 != d3) << endl;
+	cout << (d1 != d3) << endl;*/
+	int i= d1 - d2;
+	cout << i << endl;
 	return 0;
 }
