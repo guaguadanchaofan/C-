@@ -1,0 +1,3 @@
+﻿  test.cpp
+D:\CODE\C++\125. 验证回文串\test.cpp(7,13): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  125. 验证回文串.vcxproj -> D:\CODE\C++\125. 验证回文串\x64\Debug\125. 验证回文串.exe
