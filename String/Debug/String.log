@@ -1,0 +1,13 @@
+﻿  string.cpp
+D:\CODE\C++\String\string.h(335,8): error C2143: 语法错误: 缺少“;”(在“&”的前面)
+D:\CODE\C++\String\string.h(335,8): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CODE\C++\String\string.h(335,10): error C2473: “operator <<”: 看起来像函数定义，但却没有参数列表。
+D:\CODE\C++\String\string.h(335,28): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CODE\C++\String\string.h(335,30): error C2065: “out”: 未声明的标识符
+D:\CODE\C++\String\string.h(335,35): error C2059: 语法错误:“const”
+D:\CODE\C++\String\string.h(336,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\CODE\C++\String\string.h(336,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\CODE\C++\String\string.cpp(65,2): error C2872: “<<”: 不明确的符号
+D:\CODE\C++\String\string.h(335,10): message : 可能是“int &<<”
+D:\CODE\C++\String\string.cpp(65,2): message : 或  “<<”
+D:\CODE\C++\String\string.cpp(65,12): fatal  error C1903: 无法从以前的错误中恢复；正在停止编译
