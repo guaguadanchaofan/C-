@@ -62,7 +62,7 @@ void test5()
 	cout << s2.c_str() << endl;
 	cout << s2.find("e") << endl;
 	cout << s2.find("ello") << endl;*/
-	cout << s1 << endl;
+    cout << s1;
 
 
 }

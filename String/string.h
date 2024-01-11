@@ -332,16 +332,16 @@ namespace guagua
 	};
 }
 
-ostream& operator<<(ostream& out, const string& s)
+ostream& operator << (ostream& out, const string& s)
 {
-	/*for (size_t i = 0; i < s.size(); ++i)
+	for (size_t i = 0; i < s.size(); ++i)
 	{
-		out << s[i];
-	}*/
-	for (auto ch : s)
+		std::cout << s[i];
+	}
+	/*for (auto ch : s)
 	{
 		out << ch;
-	}
+	}*/
 
 
 	return out;
