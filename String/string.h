@@ -1,11 +1,7 @@
 #pragma once
 #define _CRT_SECURE_NO_WARNINGS
-#include<iostream>
-#include<assert.h>
-#include<limits>
-#include<string.h>
-#include<stdbool.h>
 
+#include <assert.h>
 
 
 namespace guagua
@@ -332,11 +328,11 @@ namespace guagua
 	};
 }
 
-ostream& operator << (ostream& out, const string& s)
+ostream& operator<< (ostream& out, const string s)
 {
 	for (size_t i = 0; i < s.size(); ++i)
 	{
-		std::cout << s[i];
+		out << s[i];
 	}
 	/*for (auto ch : s)
 	{
@@ -346,6 +342,7 @@ ostream& operator << (ostream& out, const string& s)
 
 	return out;
 }
+
 istream& operator>>(istream& in, string& s)
 {
 	s.clear();

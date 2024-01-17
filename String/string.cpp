@@ -1,8 +1,9 @@
-#include"string.h"
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <string>
 using namespace std;
 
-
-
+#include"string.h"
 
 //void test1()
 //{
@@ -62,10 +63,11 @@ void test5()
 	cout << s2.c_str() << endl;
 	cout << s2.find("e") << endl;
 	cout << s2.find("ello") << endl;*/
-    cout << s1;
+	cout << s1 << endl;;
 
 
 }
+
 int main()
 {
 	//test1();
