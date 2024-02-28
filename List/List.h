@@ -1,5 +1,6 @@
 #pragma once
 #include<assert.h>
+#include<algorithm>
 
 namespace guagua
 {
@@ -121,7 +122,43 @@ namespace guagua
 		}
 
 
+		//±éÀúµü´úÆ÷
+		template<class InputIterator>
+		list(InputIterator first, InputIterator last)
+		{
+			empty_initialize();
+			while(first!=last)
+			{
+				push_back(*first);
+				++first;
+			}
+		}
 
+
+		void swap(list<T>& lt)
+		{
+			std::swap(_head, lt._head);
+			std::swap(_size, lt._size);
+		}
+
+		//list<T> it1(it2)
+		list(const list<T>& it)
+		{
+			empty_initialize();
+			list<T> tmp(it.begin(), it.end());
+			swap(tmp);
+		}
+
+		void push_back(const T& x)
+		{
+			node* newnode = new node(x);
+			node* tail = _head->_prev;
+			// _head         tail   newnode
+			tail->_next = newnode;
+			newnode->_prev = tail;
+			newnode->_next = _head;
+			_head->_prev = newnode;
+		}
 	private:
 		node* _head;
 		size_t _size;

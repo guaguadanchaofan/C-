@@ -3,11 +3,13 @@
 #include<iostream>
 #include<string>
 
-using namespace guagua;
+
+using namespace std;
 
 
 int main()
 {
-	list<int> l;
+	guagua::list<int> l;
+	guagua::list<int> l1(l);
 	return 0;
 }
