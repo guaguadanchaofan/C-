@@ -24,7 +24,7 @@ namespace guagua
 	struct __list_iterator
 	{
 		typedef list_node<T> node;
-		typedef __list_iterator<T, T&, T*> Self;
+		typedef __list_iterator<T, Ref, Ptr> Self;
 		node* _pnode;
 
 		__list_iterator(node* p)
@@ -149,6 +149,33 @@ namespace guagua
 			swap(tmp);
 		}
 
+		//it1=lit2
+		list<T> operator=(const list<T>& it)
+		{
+			swap(it);
+			return *this;
+		}
+
+
+		size_t size()
+		{
+			return _size;
+		}
+
+		bool empty()
+		{
+			return _size == 0;
+		}
+
+	/*	~list()
+		{
+
+		}
+
+		void clear()
+		{
+
+		}*/
 		void push_back(const T& x)
 		{
 			node* newnode = new node(x);
@@ -159,9 +186,46 @@ namespace guagua
 			newnode->_next = _head;
 			_head->_prev = newnode;
 		}
+
+
+		void push_front(const T& x)
+		{
+			node* newnode = new node(x);
+			node* next = _head->_next;
+			next->_prev = newnode;
+			newnode->_prev = _head;
+			newnode->_next = next;
+			_head->_next = newnode;
+		}
+
+		void pop_back()
+		{
+			assert(_head->_next != _head);
+			node* save = _head->_prev;
+			_head->_prev = save->_prev;
+			save->_prev->_next = _head;
+			delete save;
+		}
+
+		void pop_front()
+		{
+			assert(_head->_next != _head);
+			node* save = _head->_next;
+			_head->_next = save->_next;
+			save->_next->_prev = _head;
+			delete save;
+		}
+		
+		iterator insert(iterator pos, const T& x)
+		{
+			node* newnode = new node(x);
+			node* cur = pos._pnode;
+			node* prev = cur->_prev;
+			prev->_next = newnode;
+
+		}
 	private:
 		node* _head;
 		size_t _size;
-
 	};
 }
