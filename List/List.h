@@ -167,53 +167,64 @@ namespace guagua
 			return _size == 0;
 		}
 
-	/*	~list()
+		~list()
 		{
-
+			clear();
+			delete _head;
+			_head = nullptr;
 		}
 
 		void clear()
 		{
-
-		}*/
+			iterator it = begin();
+			while (it != end())
+			{
+				it = erase(it);
+			}
+		}
 		void push_back(const T& x)
 		{
-			node* newnode = new node(x);
-			node* tail = _head->_prev;
-			// _head         tail   newnode
-			tail->_next = newnode;
-			newnode->_prev = tail;
-			newnode->_next = _head;
-			_head->_prev = newnode;
+			//node* newnode = new node(x);
+			//node* tail = _head->_prev;
+			//// _head         tail   newnode
+			//tail->_next = newnode;
+			//newnode->_prev = tail;
+			//newnode->_next = _head;
+			//_head->_prev = newnode;
+			insert(end(), x);
 		}
 
 
 		void push_front(const T& x)
 		{
-			node* newnode = new node(x);
+			/*node* newnode = new node(x);
 			node* next = _head->_next;
 			next->_prev = newnode;
 			newnode->_prev = _head;
 			newnode->_next = next;
-			_head->_next = newnode;
+			_head->_next = newnode;*/
+			insert(begin(), x);
+
 		}
 
 		void pop_back()
 		{
-			assert(_head->_next != _head);
+			/*assert(_head->_next != _head);
 			node* save = _head->_prev;
 			_head->_prev = save->_prev;
 			save->_prev->_next = _head;
-			delete save;
+			delete save;*/
+			erase(--end());
 		}
 
 		void pop_front()
 		{
-			assert(_head->_next != _head);
+			/*assert(_head->_next != _head);
 			node* save = _head->_next;
 			_head->_next = save->_next;
 			save->_next->_prev = _head;
-			delete save;
+			delete save;*/
+			erase(begin());
 		}
 		
 		iterator insert(iterator pos, const T& x)
@@ -222,8 +233,26 @@ namespace guagua
 			node* cur = pos._pnode;
 			node* prev = cur->_prev;
 			prev->_next = newnode;
-
+			newnode->_prev = prev;
+			newnode->_next = cur;
+			cur->_prev = newnode;
+			_size++;
+			return iterator(newnode);
 		}
+
+		iterator erase(iterator pos)
+		{
+			assert(pos!=end());
+			node* prev = pos._pnode->_prev;
+			node* next = pos._pnode->_next;
+			prev->_next = next;
+			next->_prev = prev;
+			delete pos._pnode;
+			--_size;
+			return iterator(next);
+		}
+
+
 	private:
 		node* _head;
 		size_t _size;
