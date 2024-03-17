@@ -1,0 +1,13 @@
+﻿  BSTree.h
+  test.cpp
+D:\CODE\C++\BSTree\BSTree.h(199,22): warning C4553: “==”: 未使用表达式结果；是否打算使用“=”?
+D:\CODE\C++\BSTree\BSTree.h(127,8): message : 在编译 类 模板 成员函数“bool guagua::BSTree<int>::Erase(const T &)”时
+          with
+          [
+              T=int
+          ]
+D:\CODE\C++\BSTree\test.cpp(17,9): message : 请参阅 "main" 中对 "guagua::BSTree<int>::Erase" 的第一个引用
+D:\CODE\C++\BSTree\test.cpp(8,14): message : 查看对正在编译的 类 模板 实例化“guagua::BSTree<int>”的引用
+D:\CODE\C++\BSTree\BSTree.h(203,23): warning C4553: “==”: 未使用表达式结果；是否打算使用“=”?
+  正在生成代码...
+  BSTree.vcxproj -> D:\CODE\C++\BSTree\x64\Debug\BSTree.exe
