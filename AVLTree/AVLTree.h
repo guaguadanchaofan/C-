@@ -259,6 +259,18 @@ namespace guagua
 			std::cout << root->_kv.first << ":" << root->_kv.second << std::endl;
 			_Inorder(root->_right);
 		}
+
+		int Height(node* root)
+		{
+			if (root == nullptr)
+			{
+				return;
+			}
+			int lh = Height(root->_left);
+			int rh = Height(root->_right);
+			return lh > rh ? lh + 1 : rh + 1;
+		}
+
 	private:
 		node* _root = nullptr;
 	};
