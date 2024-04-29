@@ -100,6 +100,19 @@ namespace guagua
 					{
 						RotateR(parent);
 					}
+					else if (parent->_bf == -2 && cur->_bf == 1)
+					{
+						RotateLR(parent);
+					}
+					else if (parent->_bf == 2 && cur->_bf == -1)
+					{
+						RotateRL(parent);
+					}
+					else
+					{
+						assert(false);
+					}
+					break;
 				}
 				else
 				{
@@ -222,16 +235,16 @@ namespace guagua
 			int bf = SubRL->_bf;
 			RotateR(parent->_right);
 			RotateL(parent);
-			if (bf == -1)
+			if (bf == 1)
 			{
 				SubR->_bf = 0;
-				parent->_bf = 1;
-				SubRL->_bf = 0;
+				parent->_bf = 0;
+				SubRL->_bf = -1;
 			}
-			else if (bf == 1)
+			else if (bf == -1)
 			{
-				SubR->_bf = 0;
-				parent->_bf = -1;
+				SubR->_bf = 1;
+				parent->_bf = 0;
 				SubRL->_bf = 0;
 			}
 			else if (bf == 0)
@@ -264,13 +277,31 @@ namespace guagua
 		{
 			if (root == nullptr)
 			{
-				return;
+				return 0;
 			}
 			int lh = Height(root->_left);
 			int rh = Height(root->_right);
 			return lh > rh ? lh + 1 : rh + 1;
 		}
-
+		bool Isbalance()
+		{
+			return Isbalance(_root);
+		}
+		bool Isbalance(node* root)
+		{
+			if (root == nullptr)
+			{
+				return true;
+			}
+			int leftHeight = Height(root->_left);
+			int rightHeight = Height(root->_right);
+			if (rightHeight - leftHeight != root->_bf)
+			{
+				std::cout << root->_kv.first << "平衡因子异常" << std::endl;
+				return false;
+			}
+			return abs(leftHeight - rightHeight) < 2 && Isbalance(root->_left) && Isbalance(root->_right);
+		}
 	private:
 		node* _root = nullptr;
 	};

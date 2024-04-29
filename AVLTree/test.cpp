@@ -14,6 +14,11 @@ int main()
 	vk.Insert(pair<int, string>(9, "five"));
 	vk.Insert(pair<int, string>(10, "five"));
 	vk.Insert(pair<int, string>(11, "five"));
+	vk.Insert(pair<int, string>(12, "five"));
+	vk.Insert(pair<int, string>(13, "five"));
 	vk.Inorder();
+	int ret = 0;
+	ret=vk.Isbalance();
+	cout << ret << endl;
 	return 0;
 }
