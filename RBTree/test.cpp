@@ -6,6 +6,6 @@
 
 int main()
 {
-
+	RBTree<int, std::pair<int, int>> RB;
 	return 0;
 }
