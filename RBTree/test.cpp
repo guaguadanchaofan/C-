@@ -6,6 +6,13 @@
 
 int main()
 {
-	RBTree<int, std::pair<int, int>> RB;
+	int a[] = { 16, 3, 7, 11, 9, 26, 18, 14, 15 };
+	RBTree<int, int> RB;
+	for (auto e : a)
+	{
+		RB.Insert(std::make_pair(e,e));
+	}
+	RB.Insert(std::make_pair(1, 1));
+	RB.Inorder();
 	return 0;
 }

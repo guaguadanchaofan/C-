@@ -224,6 +224,22 @@ public:
 		}
 
 	}
+
+	//±éÀú
+	void Inorder()
+	{
+		_Inorder(_root);
+	}
+	void _Inorder(Node* _root)
+	{
+		if (_root == nullptr)
+		{
+			return;
+		}
+		_Inorder(_root->_left);
+		std::cout << _root->_kv.first << ":" << _root->_kv.second << std::endl;
+		_Inorder(_root->_right);
+	}
 private:
 	Node* _root = nullptr;
 };
