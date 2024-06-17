@@ -3,17 +3,37 @@
 
 
 
-
-namespace guagua
+template<class K>
+struct HashFunc
 {
-	template<class K>
-	struct HashFunc
+	size_t operator()(const K& key)
 	{
-		size_t operator()(const K& key)
+		return (size_t)key;
+	}
+};
+
+
+//特化
+template<>
+struct HashFunc<std::string>
+{
+	size_t operator()(const std::string& key)
+	{
+		size_t hash = 0;
+		for (auto ch : key)
 		{
-			return (size_t)key;
+			hash *= 131;
+			hash += ch;
 		}
-	};
+		return hash;
+	}
+};
+
+
+//哈希表
+namespace closehash
+{
+
 	//枚举哈希表的状态
 	enum State
 	{
@@ -129,5 +149,101 @@ namespace guagua
 	private:
 		std::vector<Date> _tables;
 		size_t _n = 0;
+	};
+}
+
+
+//哈希桶
+
+namespace buckethash
+{
+	template<class T>
+	struct HashNode
+	{
+		T _data;
+		HashNode* _next;
+
+		//初始化
+		HashNode(const T& data)
+			:_data(data)
+			, _next(nullptr)
+		{}
+	};
+
+
+	//前置声明
+	template<class K, class T, class hash, class KeyOfT>
+	class HashTable;
+
+	//为什么const迭代器没有复用？
+	template<class K, class T, class hash, class KeyOfT>
+	//迭代器
+	struct __HTiterator
+	{
+
+		//类型重定义
+		typedef HashNode<T> Node;
+		typedef __HTiterator<K, T, hash, KeyOfT> Self;
+		typedef HashTable<K, T, hash, KeyOfT> HT;
+
+		Node* _node;
+		HT* _ht;
+
+		//初始化
+		__HTiterator(Node* node, HT* ht)
+			:_node(node)
+			, _ht(ht)
+		{}
+		T& operator*()
+		{
+			return _node->_data;
+		}
+		T& operator->()
+		{
+			return &_node->_data;
+		}
+
+		bool operator !=(const Self& s)const
+		{
+			return _node != s._node;
+		}
+
+		Self& operator++()
+		{
+			//如果当前桶下一个不为空
+			if (_node->_next)
+			{
+				_node= _node->_next;
+			}
+			else
+			{
+				KeyOfT kot;
+				hash hash;
+				size_t haxi = hash(kot(_node->_data)) % _ht->_tables.size();
+				++haxi;
+				while (haxi < _ht->_tables.size())
+				{
+					if (_ht->_tables[haxi])
+					{
+						_node = _ht->_tables[haxi];
+						break;
+					}
+					else
+					{
+						++haxi;
+					}
+				}
+
+				//后面没有桶了
+				if (haxi == _ht->_tables.size())
+				{
+					_node == nullptr;
+				}
+			}
+			return *this;
+		}
+		template<class K, class T, class hash, class KeyOfT>
+		friend struct __HTiterator;
+
 	};
 }

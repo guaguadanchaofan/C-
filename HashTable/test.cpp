@@ -5,7 +5,7 @@
 
 int main()
 {
-	guagua::HashTable<int, int> ht;
+	closehash::HashTable<int, int> ht;
 	int a[] = { 18, 8, 7, 27, 57, 3, 38, 18 };
 	for (auto& e : a)
 	{
