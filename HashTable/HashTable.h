@@ -243,7 +243,85 @@ namespace buckethash
 			return *this;
 		}
 		template<class K, class T, class hash, class KeyOfT>
-		friend struct __HTiterator;
+		class HashTable
+		{
+			friend struct __HTiterator;
+			typedef HashNode<T> Node;
+		public:
+			typedef __HTiterator<K, T, hash, KeyOfT> iterator;
+
+			HashTable()
+				:_n(0)
+			{
+				_tables.resize(10);
+			}
+			iterator begin()
+			{
+				for (size_t i = 0; i < _tables.size(); ++i)
+				{
+					if (_tables[i])
+					{
+						return iterator(_tables, this);
+					}
+				}
+			}
+
+			iterator end()
+			{
+				return iterator(nullptr, this);
+			}
+
+			~HashTable()
+			{
+				for (size_t i = 0; i < _tables.size(); i++)
+				{
+					Node* cur = _tables[i];
+					while (cur)
+					{
+						Node* Next = cur->_next;
+						delete cur;
+						cur=Next
+					}
+					_tables[i] = nullptr;
+				}
+			}
+
+
+			std::pair<iterator,bool> insert(const T& data)
+			{
+				KeyOfT kot;
+
+				iterator it = Find(kot(data));
+				if (it != end())
+				{
+					return make_pair(it, false);
+				}
+
+				//负载因子控制在1
+				if (_tables.size() == _n)
+				{
+
+
+					//HashTable<K, T, hash> newht;
+					//newht.
+					/*std::vector<Node*> newht;
+					newht.resize(_tables.size() * 2);
+					for (size_t i = 0; i < _tables.size(); ++i)
+					{
+						Node* cur = _tables[i];
+						while (cur)
+						{
+							Node* next = cur->_next;
+							size_t haxi = hash(kot(cur->_data)) % newht.size();
+							
+						}
+					}*/
+				}
+			}
+		private:
+			std::vector<Node*> _tables; //指针数组
+			size_t _n = 0;//
+		};
 
 	};
 }
