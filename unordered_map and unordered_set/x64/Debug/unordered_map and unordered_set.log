@@ -1,0 +1,7 @@
+﻿  test.cpp
+D:\CODE\C++\unordered_map and unordered_set\HashTable.h(18,22): error C2039: "string": 不是 "std" 的成员
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(26,1): message : 参见“std”的声明
+D:\CODE\C++\unordered_map and unordered_set\HashTable.h(18,22): error C2065: “string”: 未声明的标识符
+D:\CODE\C++\unordered_map and unordered_set\HashTable.h(18,8): error C2923: "HashFunc": "string" 不是参数 "K" 的有效 模板 类型参数
+D:\CODE\C++\unordered_map and unordered_set\HashTable.h(18,22): message : 参见“string”的声明
+D:\CODE\C++\unordered_map and unordered_set\HashTable.h(30,2): error C2913: 显式专用化；“HashFunc”不是类模板的专用化

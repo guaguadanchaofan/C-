@@ -1,0 +1,286 @@
+﻿  test.cpp
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(17,81): error C2027: 使用了未定义类型“buckethash::HashTable<K,std::pair<const std::string,std::string>,guagua::unordered_map<K,std::string,HashFunc<std::string>>::MapKeyOfT,Hash>”
+          with
+          [
+              K=std::string,
+              Hash=HashFunc<std::string>
+          ]
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(17,32): message : 参见“buckethash::HashTable<K,std::pair<const std::string,std::string>,guagua::unordered_map<K,std::string,HashFunc<std::string>>::MapKeyOfT,Hash>”的声明
+          with
+          [
+              K=std::string,
+              Hash=HashFunc<std::string>
+          ]
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(39,33): message : 查看对正在编译的 类 模板 实例化“guagua::unordered_map<std::string,std::string,HashFunc<std::string>>”的引用
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(35,68): error C2079: “guagua::unordered_map<std::string,std::string,HashFunc<std::string>>::_ht”使用未定义的 class“buckethash::HashTable<const K,std::pair<_Kty,_Ty>,guagua::unordered_map<K,std::string,HashFunc<std::string>>::MapKeyOfT,Hash>”
+          with
+          [
+              K=std::string,
+              _Kty=std::string,
+              _Ty=std::string,
+              Hash=HashFunc<std::string>
+          ]
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): error C2514: “std::iterator”: 无法构建类模板
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(7123,1): message : 参见“std::iterator”的声明
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): error C2676: 二进制“!=”:“std::iterator”不定义该运算符或到预定义运算符可接收的类型的转换
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\map(642,17): message : 可能是“bool std::operator !=(const std::multimap<_Kty,_Ty,_Pr,_Alloc> &,const std::multimap<_Kty,_Ty,_Pr,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::multimap<_Kty,_Ty,_Pr,_Alloc> &,const std::multimap<_Kty,_Ty,_Pr,_Alloc> &)”: 无法从“std::iterator”推导出“const std::multimap<_Kty,_Ty,_Pr,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\map(408,17): message : 或    “bool std::operator !=(const std::map<_Kty,_Ty,_Pr,_Alloc> &,const std::map<_Kty,_Ty,_Pr,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::map<_Kty,_Ty,_Pr,_Alloc> &,const std::map<_Kty,_Ty,_Pr,_Alloc> &)”: 无法从“std::iterator”推导出“const std::map<_Kty,_Ty,_Pr,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\set(434,17): message : 或    “bool std::operator !=(const std::multiset<_Kty,_Pr,_Alloc> &,const std::multiset<_Kty,_Pr,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::multiset<_Kty,_Pr,_Alloc> &,const std::multiset<_Kty,_Pr,_Alloc> &)”: 无法从“std::iterator”推导出“const std::multiset<_Kty,_Pr,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\set(217,17): message : 或    “bool std::operator !=(const std::set<_Kty,_Pr,_Alloc> &,const std::set<_Kty,_Pr,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::set<_Kty,_Pr,_Alloc> &,const std::set<_Kty,_Pr,_Alloc> &)”: 无法从“std::iterator”推导出“const std::set<_Kty,_Pr,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\unordered_set(746,17): message : 或    “bool std::operator !=(const std::unordered_multiset<_Kty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_multiset<_Kty,_Hasher,_Keyeq,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::unordered_multiset<_Kty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_multiset<_Kty,_Hasher,_Keyeq,_Alloc> &)”: 无法从“std::iterator”推导出“const std::unordered_multiset<_Kty,_Hasher,_Keyeq,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\unordered_set(403,17): message : 或    “bool std::operator !=(const std::unordered_set<_Kty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_set<_Kty,_Hasher,_Keyeq,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::unordered_set<_Kty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_set<_Kty,_Hasher,_Keyeq,_Alloc> &)”: 无法从“std::iterator”推导出“const std::unordered_set<_Kty,_Hasher,_Keyeq,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\unordered_map(919,17): message : 或    “bool std::operator !=(const std::unordered_multimap<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_multimap<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::unordered_multimap<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_multimap<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &)”: 无法从“std::iterator”推导出“const std::unordered_multimap<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\unordered_map(548,17): message : 或    “bool std::operator !=(const std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &)”: 无法从“std::iterator”推导出“const std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(2236,17): message : 或    “bool std::operator !=(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)”: 无法从“std::iterator”推导出“const std::vector<_Ty,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\tuple(889,27): message : 或    “bool std::operator !=(const std::tuple<_Types...> &,const std::tuple<_Types...> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::tuple<_Types...> &,const std::tuple<_Types...> &)”: 无法从“std::iterator”推导出“const std::tuple<_Types...> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\list(1883,17): message : 或    “bool std::operator !=(const std::list<_Ty,_Alloc> &,const std::list<_Ty,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::list<_Ty,_Alloc> &,const std::list<_Ty,_Alloc> &)”: 无法从“std::iterator”推导出“const std::list<_Ty,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(3577,17): message : 或    “bool std::operator !=(std::nullptr_t,const std::unique_ptr<_Ty,_Dx> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(std::nullptr_t,const std::unique_ptr<_Ty,_Dx> &) noexcept”: 无法从“std::iterator”推导出“const std::unique_ptr<_Ty,_Dx> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(3572,17): message : 或    “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,std::nullptr_t) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,std::nullptr_t) noexcept”: 无法从“std::iterator”推导出“const std::unique_ptr<_Ty,_Dx> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(3519,17): message : 或    “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,const std::unique_ptr<_Ty2,_Dx2> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,const std::unique_ptr<_Ty2,_Dx2> &)”: 无法从“std::iterator”推导出“const std::unique_ptr<_Ty,_Dx> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(1942,17): message : 或    “bool std::operator !=(std::nullptr_t,const std::shared_ptr<_Ty> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(std::nullptr_t,const std::shared_ptr<_Ty> &) noexcept”: 无法从“std::iterator”推导出“const std::shared_ptr<_Ty> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(1937,17): message : 或    “bool std::operator !=(const std::shared_ptr<_Ty> &,std::nullptr_t) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::shared_ptr<_Ty> &,std::nullptr_t) noexcept”: 无法从“std::iterator”推导出“const std::shared_ptr<_Ty> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(1895,17): message : 或    “bool std::operator !=(const std::shared_ptr<_Ty> &,const std::shared_ptr<_Ty0> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::shared_ptr<_Ty> &,const std::shared_ptr<_Ty0> &) noexcept”: 无法从“std::iterator”推导出“const std::shared_ptr<_Ty> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xstring(5050,17): message : 或    “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )”: 无法从“std::iterator”推导出“const std::basic_string<_Elem,_Traits,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xstring(5045,17): message : 或    “bool std::operator !=(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)”: 无法从“std::iterator”推导出“const _Elem *const ”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xstring(5039,17): message : 或    “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept”: 无法从“std::iterator”推导出“const std::basic_string<_Elem,_Traits,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xmemory(1040,17): message : 或    “bool std::operator !=(const std::allocator<_Ty> &,const std::allocator<_Other> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::allocator<_Ty> &,const std::allocator<_Other> &) noexcept”: 无法从“std::iterator”推导出“const std::allocator<_Ty> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\iterator(496,17): message : 或    “bool std::operator !=(const std::istreambuf_iterator<_Elem,_Traits> &,const std::istreambuf_iterator<_Elem,_Traits> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::istreambuf_iterator<_Elem,_Traits> &,const std::istreambuf_iterator<_Elem,_Traits> &)”: 无法从“std::iterator”推导出“const std::istreambuf_iterator<_Elem,_Traits> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\iterator(314,17): message : 或    “bool std::operator !=(const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &,const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &,const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &) noexcept”: 无法从“std::iterator”推导出“const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(4279,30): message : 或    “bool std::operator !=(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &) noexcept(<expr>)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &) noexcept(<expr>)”: 无法从“std::iterator”推导出“const std::move_iterator<_Iter> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(1671,5): message : 或    “bool std::operator !=(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &) noexcept(<expr>)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &) noexcept(<expr>)”: 无法从“std::iterator”推导出“const std::reverse_iterator<_BidIt> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\utility(499,27): message : 或    “bool std::operator !=(const std::pair<_Ty1,_Ty2> &,const std::pair<_Uty1,_Uty2> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): message : “bool std::operator !=(const std::pair<_Ty1,_Ty2> &,const std::pair<_Uty1,_Uty2> &)”: 无法从“std::iterator”推导出“const std::pair<_Ty1,_Ty2> &”的 模板 参数
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,19): error C2675: 一元“++”:“std::iterator”不定义该运算符或到预定义运算符可接收类型的转换
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(44,23): error C2100: 非法的间接寻址
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(47,7): error C2039: "second": 不是 "std::iterator" 的成员
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(7123,1): message : 参见“std::iterator”的声明
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(49,15): error C2039: "first": 不是 "std::iterator" 的成员
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(7123,1): message : 参见“std::iterator”的声明
+D:\CODE\C++\unordered_map and unordered_set\unordered_map.h(49,34): error C2039: "second": 不是 "std::iterator" 的成员
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(7123,1): message : 参见“std::iterator”的声明
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(17,72): error C2027: 使用了未定义类型“buckethash::HashTable<K,const K,guagua::unordered_set<K,HashFunc<K>>::SetKeyOfT,Hash>”
+          with
+          [
+              K=int,
+              Hash=HashFunc<int>
+          ]
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(17,32): message : 参见“buckethash::HashTable<K,const K,guagua::unordered_set<K,HashFunc<K>>::SetKeyOfT,Hash>”的声明
+          with
+          [
+              K=int,
+              Hash=HashFunc<int>
+          ]
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(40,22): message : 查看对正在编译的 类 模板 实例化“guagua::unordered_set<int,HashFunc<K>>”的引用
+          with
+          [
+              K=int
+          ]
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(35,54): error C2079: “guagua::unordered_set<int,HashFunc<K>>::_ht”使用未定义的 class“buckethash::HashTable<K,const K,guagua::unordered_set<K,HashFunc<K>>::SetKeyOfT,Hash>”
+          with
+          [
+              K=int
+          ]
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(48,35): error C2514: “std::iterator”: 无法构建类模板
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(7123,1): message : 参见“std::iterator”的声明
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,13): error C2676: 二进制“!=”:“std::iterator”不定义该运算符或到预定义运算符可接收的类型的转换
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\map(642,17): message : 可能是“bool std::operator !=(const std::multimap<_Kty,_Ty,_Pr,_Alloc> &,const std::multimap<_Kty,_Ty,_Pr,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::multimap<_Kty,_Ty,_Pr,_Alloc> &,const std::multimap<_Kty,_Ty,_Pr,_Alloc> &)”: 无法从“std::iterator”推导出“const std::multimap<_Kty,_Ty,_Pr,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\map(408,17): message : 或    “bool std::operator !=(const std::map<_Kty,_Ty,_Pr,_Alloc> &,const std::map<_Kty,_Ty,_Pr,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::map<_Kty,_Ty,_Pr,_Alloc> &,const std::map<_Kty,_Ty,_Pr,_Alloc> &)”: 无法从“std::iterator”推导出“const std::map<_Kty,_Ty,_Pr,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\set(434,17): message : 或    “bool std::operator !=(const std::multiset<_Kty,_Pr,_Alloc> &,const std::multiset<_Kty,_Pr,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::multiset<_Kty,_Pr,_Alloc> &,const std::multiset<_Kty,_Pr,_Alloc> &)”: 无法从“std::iterator”推导出“const std::multiset<_Kty,_Pr,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\set(217,17): message : 或    “bool std::operator !=(const std::set<_Kty,_Pr,_Alloc> &,const std::set<_Kty,_Pr,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::set<_Kty,_Pr,_Alloc> &,const std::set<_Kty,_Pr,_Alloc> &)”: 无法从“std::iterator”推导出“const std::set<_Kty,_Pr,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\unordered_set(746,17): message : 或    “bool std::operator !=(const std::unordered_multiset<_Kty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_multiset<_Kty,_Hasher,_Keyeq,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::unordered_multiset<_Kty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_multiset<_Kty,_Hasher,_Keyeq,_Alloc> &)”: 无法从“std::iterator”推导出“const std::unordered_multiset<_Kty,_Hasher,_Keyeq,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\unordered_set(403,17): message : 或    “bool std::operator !=(const std::unordered_set<_Kty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_set<_Kty,_Hasher,_Keyeq,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::unordered_set<_Kty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_set<_Kty,_Hasher,_Keyeq,_Alloc> &)”: 无法从“std::iterator”推导出“const std::unordered_set<_Kty,_Hasher,_Keyeq,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\unordered_map(919,17): message : 或    “bool std::operator !=(const std::unordered_multimap<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_multimap<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::unordered_multimap<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_multimap<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &)”: 无法从“std::iterator”推导出“const std::unordered_multimap<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\unordered_map(548,17): message : 或    “bool std::operator !=(const std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &)”: 无法从“std::iterator”推导出“const std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(2236,17): message : 或    “bool std::operator !=(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)”: 无法从“std::iterator”推导出“const std::vector<_Ty,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\tuple(889,27): message : 或    “bool std::operator !=(const std::tuple<_Types...> &,const std::tuple<_Types...> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::tuple<_Types...> &,const std::tuple<_Types...> &)”: 无法从“std::iterator”推导出“const std::tuple<_Types...> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\list(1883,17): message : 或    “bool std::operator !=(const std::list<_Ty,_Alloc> &,const std::list<_Ty,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::list<_Ty,_Alloc> &,const std::list<_Ty,_Alloc> &)”: 无法从“std::iterator”推导出“const std::list<_Ty,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(3577,17): message : 或    “bool std::operator !=(std::nullptr_t,const std::unique_ptr<_Ty,_Dx> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(std::nullptr_t,const std::unique_ptr<_Ty,_Dx> &) noexcept”: 无法从“std::iterator”推导出“const std::unique_ptr<_Ty,_Dx> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(3572,17): message : 或    “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,std::nullptr_t) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,std::nullptr_t) noexcept”: 无法从“std::iterator”推导出“const std::unique_ptr<_Ty,_Dx> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(3519,17): message : 或    “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,const std::unique_ptr<_Ty2,_Dx2> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,const std::unique_ptr<_Ty2,_Dx2> &)”: 无法从“std::iterator”推导出“const std::unique_ptr<_Ty,_Dx> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(1942,17): message : 或    “bool std::operator !=(std::nullptr_t,const std::shared_ptr<_Ty> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(std::nullptr_t,const std::shared_ptr<_Ty> &) noexcept”: 无法从“std::iterator”推导出“const std::shared_ptr<_Ty> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(1937,17): message : 或    “bool std::operator !=(const std::shared_ptr<_Ty> &,std::nullptr_t) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::shared_ptr<_Ty> &,std::nullptr_t) noexcept”: 无法从“std::iterator”推导出“const std::shared_ptr<_Ty> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(1895,17): message : 或    “bool std::operator !=(const std::shared_ptr<_Ty> &,const std::shared_ptr<_Ty0> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::shared_ptr<_Ty> &,const std::shared_ptr<_Ty0> &) noexcept”: 无法从“std::iterator”推导出“const std::shared_ptr<_Ty> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xstring(5050,17): message : 或    “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )”: 无法从“std::iterator”推导出“const std::basic_string<_Elem,_Traits,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xstring(5045,17): message : 或    “bool std::operator !=(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)”: 无法从“std::iterator”推导出“const _Elem *const ”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xstring(5039,17): message : 或    “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept”: 无法从“std::iterator”推导出“const std::basic_string<_Elem,_Traits,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xmemory(1040,17): message : 或    “bool std::operator !=(const std::allocator<_Ty> &,const std::allocator<_Other> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::allocator<_Ty> &,const std::allocator<_Other> &) noexcept”: 无法从“std::iterator”推导出“const std::allocator<_Ty> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\iterator(496,17): message : 或    “bool std::operator !=(const std::istreambuf_iterator<_Elem,_Traits> &,const std::istreambuf_iterator<_Elem,_Traits> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::istreambuf_iterator<_Elem,_Traits> &,const std::istreambuf_iterator<_Elem,_Traits> &)”: 无法从“std::iterator”推导出“const std::istreambuf_iterator<_Elem,_Traits> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\iterator(314,17): message : 或    “bool std::operator !=(const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &,const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &,const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &) noexcept”: 无法从“std::iterator”推导出“const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(4279,30): message : 或    “bool std::operator !=(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &) noexcept(<expr>)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &) noexcept(<expr>)”: 无法从“std::iterator”推导出“const std::move_iterator<_Iter> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(1671,5): message : 或    “bool std::operator !=(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &) noexcept(<expr>)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &) noexcept(<expr>)”: 无法从“std::iterator”推导出“const std::reverse_iterator<_BidIt> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\utility(499,27): message : 或    “bool std::operator !=(const std::pair<_Ty1,_Ty2> &,const std::pair<_Uty1,_Uty2> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(49,10): message : “bool std::operator !=(const std::pair<_Ty1,_Ty2> &,const std::pair<_Uty1,_Uty2> &)”: 无法从“std::iterator”推导出“const std::pair<_Ty1,_Ty2> &”的 模板 参数
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(52,12): error C2100: 非法的间接寻址
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(52,9): error C2088: “<<”: 对于 class 非法
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(53,4): error C2675: 一元“++”:“std::iterator”不定义该运算符或到预定义运算符可接收类型的转换
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): error C2514: “std::iterator”: 无法构建类模板
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(7123,1): message : 参见“std::iterator”的声明
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): error C2676: 二进制“!=”:“std::iterator”不定义该运算符或到预定义运算符可接收的类型的转换
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\map(642,17): message : 可能是“bool std::operator !=(const std::multimap<_Kty,_Ty,_Pr,_Alloc> &,const std::multimap<_Kty,_Ty,_Pr,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::multimap<_Kty,_Ty,_Pr,_Alloc> &,const std::multimap<_Kty,_Ty,_Pr,_Alloc> &)”: 无法从“std::iterator”推导出“const std::multimap<_Kty,_Ty,_Pr,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\map(408,17): message : 或    “bool std::operator !=(const std::map<_Kty,_Ty,_Pr,_Alloc> &,const std::map<_Kty,_Ty,_Pr,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::map<_Kty,_Ty,_Pr,_Alloc> &,const std::map<_Kty,_Ty,_Pr,_Alloc> &)”: 无法从“std::iterator”推导出“const std::map<_Kty,_Ty,_Pr,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\set(434,17): message : 或    “bool std::operator !=(const std::multiset<_Kty,_Pr,_Alloc> &,const std::multiset<_Kty,_Pr,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::multiset<_Kty,_Pr,_Alloc> &,const std::multiset<_Kty,_Pr,_Alloc> &)”: 无法从“std::iterator”推导出“const std::multiset<_Kty,_Pr,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\set(217,17): message : 或    “bool std::operator !=(const std::set<_Kty,_Pr,_Alloc> &,const std::set<_Kty,_Pr,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::set<_Kty,_Pr,_Alloc> &,const std::set<_Kty,_Pr,_Alloc> &)”: 无法从“std::iterator”推导出“const std::set<_Kty,_Pr,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\unordered_set(746,17): message : 或    “bool std::operator !=(const std::unordered_multiset<_Kty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_multiset<_Kty,_Hasher,_Keyeq,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::unordered_multiset<_Kty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_multiset<_Kty,_Hasher,_Keyeq,_Alloc> &)”: 无法从“std::iterator”推导出“const std::unordered_multiset<_Kty,_Hasher,_Keyeq,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\unordered_set(403,17): message : 或    “bool std::operator !=(const std::unordered_set<_Kty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_set<_Kty,_Hasher,_Keyeq,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::unordered_set<_Kty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_set<_Kty,_Hasher,_Keyeq,_Alloc> &)”: 无法从“std::iterator”推导出“const std::unordered_set<_Kty,_Hasher,_Keyeq,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\unordered_map(919,17): message : 或    “bool std::operator !=(const std::unordered_multimap<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_multimap<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::unordered_multimap<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_multimap<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &)”: 无法从“std::iterator”推导出“const std::unordered_multimap<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\unordered_map(548,17): message : 或    “bool std::operator !=(const std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &,const std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &)”: 无法从“std::iterator”推导出“const std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(2236,17): message : 或    “bool std::operator !=(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)”: 无法从“std::iterator”推导出“const std::vector<_Ty,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\tuple(889,27): message : 或    “bool std::operator !=(const std::tuple<_Types...> &,const std::tuple<_Types...> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::tuple<_Types...> &,const std::tuple<_Types...> &)”: 无法从“std::iterator”推导出“const std::tuple<_Types...> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\list(1883,17): message : 或    “bool std::operator !=(const std::list<_Ty,_Alloc> &,const std::list<_Ty,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::list<_Ty,_Alloc> &,const std::list<_Ty,_Alloc> &)”: 无法从“std::iterator”推导出“const std::list<_Ty,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(3577,17): message : 或    “bool std::operator !=(std::nullptr_t,const std::unique_ptr<_Ty,_Dx> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(std::nullptr_t,const std::unique_ptr<_Ty,_Dx> &) noexcept”: 无法从“std::iterator”推导出“const std::unique_ptr<_Ty,_Dx> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(3572,17): message : 或    “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,std::nullptr_t) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,std::nullptr_t) noexcept”: 无法从“std::iterator”推导出“const std::unique_ptr<_Ty,_Dx> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(3519,17): message : 或    “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,const std::unique_ptr<_Ty2,_Dx2> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,const std::unique_ptr<_Ty2,_Dx2> &)”: 无法从“std::iterator”推导出“const std::unique_ptr<_Ty,_Dx> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(1942,17): message : 或    “bool std::operator !=(std::nullptr_t,const std::shared_ptr<_Ty> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(std::nullptr_t,const std::shared_ptr<_Ty> &) noexcept”: 无法从“std::iterator”推导出“const std::shared_ptr<_Ty> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(1937,17): message : 或    “bool std::operator !=(const std::shared_ptr<_Ty> &,std::nullptr_t) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::shared_ptr<_Ty> &,std::nullptr_t) noexcept”: 无法从“std::iterator”推导出“const std::shared_ptr<_Ty> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(1895,17): message : 或    “bool std::operator !=(const std::shared_ptr<_Ty> &,const std::shared_ptr<_Ty0> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::shared_ptr<_Ty> &,const std::shared_ptr<_Ty0> &) noexcept”: 无法从“std::iterator”推导出“const std::shared_ptr<_Ty> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xstring(5050,17): message : 或    “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )”: 无法从“std::iterator”推导出“const std::basic_string<_Elem,_Traits,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xstring(5045,17): message : 或    “bool std::operator !=(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)”: 无法从“std::iterator”推导出“const _Elem *const ”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xstring(5039,17): message : 或    “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept”: 无法从“std::iterator”推导出“const std::basic_string<_Elem,_Traits,_Alloc> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xmemory(1040,17): message : 或    “bool std::operator !=(const std::allocator<_Ty> &,const std::allocator<_Other> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::allocator<_Ty> &,const std::allocator<_Other> &) noexcept”: 无法从“std::iterator”推导出“const std::allocator<_Ty> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\iterator(496,17): message : 或    “bool std::operator !=(const std::istreambuf_iterator<_Elem,_Traits> &,const std::istreambuf_iterator<_Elem,_Traits> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::istreambuf_iterator<_Elem,_Traits> &,const std::istreambuf_iterator<_Elem,_Traits> &)”: 无法从“std::iterator”推导出“const std::istreambuf_iterator<_Elem,_Traits> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\iterator(314,17): message : 或    “bool std::operator !=(const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &,const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &) noexcept”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &,const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &) noexcept”: 无法从“std::iterator”推导出“const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(4279,30): message : 或    “bool std::operator !=(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &) noexcept(<expr>)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &) noexcept(<expr>)”: 无法从“std::iterator”推导出“const std::move_iterator<_Iter> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(1671,5): message : 或    “bool std::operator !=(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &) noexcept(<expr>)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &) noexcept(<expr>)”: 无法从“std::iterator”推导出“const std::reverse_iterator<_BidIt> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\utility(499,27): message : 或    “bool std::operator !=(const std::pair<_Ty1,_Ty2> &,const std::pair<_Uty1,_Uty2> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): message : “bool std::operator !=(const std::pair<_Ty1,_Ty2> &,const std::pair<_Uty1,_Uty2> &)”: 无法从“std::iterator”推导出“const std::pair<_Ty1,_Ty2> &”的 模板 参数
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,17): error C2675: 一元“++”:“std::iterator”不定义该运算符或到预定义运算符可接收类型的转换
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,19): error C2100: 非法的间接寻址
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(57,19): error C2514: “std::iterator”: 无法构建类模板
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(7123,1): message : 参见“std::iterator”的声明
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,4): error C2679: 二元“<<”: 没有找到接受“std::iterator”类型的右操作数的运算符(或没有可接受的转换)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(481,39): message : 可能是“std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_streambuf<char,std::char_traits<char>> *)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(449,39): message : 或    “std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(const void *)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(431,39): message : 或    “std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long double)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(413,39): message : 或    “std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(395,39): message : 或    “std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(float)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(377,39): message : 或    “std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned __int64)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(359,39): message : 或    “std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(__int64)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(341,39): message : 或    “std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned long)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(323,39): message : 或    “std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(304,39): message : 或    “std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(278,39): message : 或    “std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(259,39): message : 或    “std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(225,39): message : 或    “std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(short)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(207,39): message : 或    “std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(bool)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(201,39): message : 或    “std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(195,39): message : 或    “std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(190,39): message : 或    “std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(1081,32): message : 或    “std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::error_code &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : “初始化”: 无法从“std::iterator”转换为“const std::error_code &”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : 原因如下: 无法从“std::iterator”转换为“const std::error_code”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : 没有可用于执行该转换的用户定义的转换运算符，或者无法调用该运算符
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(1004,9): message : 或    “_Ostr &&std::operator <<(_Ostr &&,const _Ty &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,4): message : “_Ostr &&std::operator <<(_Ostr &&,const _Ty &)”: 无法推导“__formal”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(946,31): message : 或    “std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,unsigned char)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : “初始化”: 无法从“std::iterator”转换为“unsigned char”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : 没有可用于执行该转换的用户定义的转换运算符，或者无法调用该运算符
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(940,31): message : 或    “std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const unsigned char *)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : “初始化”: 无法从“std::iterator”转换为“const unsigned char *”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : 没有可用于执行该转换的用户定义的转换运算符，或者无法调用该运算符
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(935,31): message : 或    “std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,signed char)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : “初始化”: 无法从“std::iterator”转换为“signed char”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : 没有可用于执行该转换的用户定义的转换运算符，或者无法调用该运算符
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(929,31): message : 或    “std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const signed char *)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : “初始化”: 无法从“std::iterator”转换为“const signed char *”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : 没有可用于执行该转换的用户定义的转换运算符，或者无法调用该运算符
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(893,32): message : 或    “std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,_Elem)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,4): message : “std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,_Elem)”: 模板 参数“_Elem”不明确
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,4): message : 可能是“std::iterator”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,4): message : 或    “char”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,4): message : “std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,_Elem)”: 无法从“std::iterator”推导出“_Elem”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(850,32): message : 或    “std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const _Elem *)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,4): message : “std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const _Elem *)”: 无法从“std::iterator”推导出“const _Elem *”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(812,31): message : 或    “std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,char)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : “初始化”: 无法从“std::iterator”转换为“char”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : 没有可用于执行该转换的用户定义的转换运算符，或者无法调用该运算符
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(767,31): message : 或    “std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const char *)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : “初始化”: 无法从“std::iterator”转换为“const char *”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : 没有可用于执行该转换的用户定义的转换运算符，或者无法调用该运算符
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(731,32): message : 或    “std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,char)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : “初始化”: 无法从“std::iterator”转换为“char”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : 没有可用于执行该转换的用户定义的转换运算符，或者无法调用该运算符
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\ostream(687,32): message : 或    “std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const char *)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : “初始化”: 无法从“std::iterator”转换为“const char *”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,12): message : 没有可用于执行该转换的用户定义的转换运算符，或者无法调用该运算符
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(3641,32): message : 或    “std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::unique_ptr<_Ty2,_Dx2> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,4): message : “std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::unique_ptr<_Ty2,_Dx2> &)”: 无法从“std::iterator”推导出“const std::unique_ptr<_Ty2,_Dx2> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\memory(1988,32): message : 或    “std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::shared_ptr<_Ty> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,4): message : “std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::shared_ptr<_Ty> &)”: 无法从“std::iterator”推导出“const std::shared_ptr<_Ty> &”的 模板 参数
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xstring(5185,32): message : 或    “std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string<_Elem,_Traits,_Alloc> &)”
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,4): message : “std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string<_Elem,_Traits,_Alloc> &)”: 无法从“std::iterator”推导出“const std::basic_string<_Elem,_Traits,_Alloc> &”的 模板 参数
+D:\CODE\C++\unordered_map and unordered_set\unordered_set.h(59,4): message : 尝试匹配参数列表“(std::ostream, std::iterator)”时
