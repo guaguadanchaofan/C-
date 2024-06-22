@@ -31,7 +31,7 @@ struct HashFunc<std::string>
 };
 
 
-//¹şÏ£±í
+//¹şÏ£±í(±ÕÉ¢Á´)
 namespace closehash
 {
 
@@ -154,7 +154,7 @@ namespace closehash
 }
 
 
-//¹şÏ£Í°
+//¹şÏ£Í°£¨¿ªÉ¢Á´£©
 
 namespace buckethash
 {
