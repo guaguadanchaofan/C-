@@ -245,8 +245,9 @@ namespace buckethash
 		template<class K, class T, class hash, class KeyOfT>
 		class HashTable
 		{
-			friend struct __HTiterator;
 			typedef HashNode<T> Node;
+			template<class K, class T, class Hash, class KeyOfT>
+			friend struct __HTiterator;
 		public:
 			typedef __HTiterator<K, T, hash, KeyOfT> iterator;
 
@@ -261,9 +262,10 @@ namespace buckethash
 				{
 					if (_tables[i])
 					{
-						return iterator(_tables, this);
+						return iterator(_tables[i], this);
 					}
 				}
+				return iterator(nullptr,this);
 			}
 
 			iterator end()
@@ -273,14 +275,14 @@ namespace buckethash
 
 			~HashTable()
 			{
-				for (size_t i = 0; i < _tables.size(); i++)
+				for (size_t i=0;i<_tables.size;++i)
 				{
 					Node* cur = _tables[i];
 					while (cur)
 					{
 						Node* Next = cur->_next;
 						delete cur;
-						cur=Next
+						cur = Next;
 					}
 					_tables[i] = nullptr;
 				}
@@ -294,7 +296,7 @@ namespace buckethash
 				iterator it = Find(kot(data));
 				if (it != end())
 				{
-					return make_pair(it, false);
+					return std::make_pair(it, false);
 				}
 
 				//负载因子控制在1
@@ -302,8 +304,8 @@ namespace buckethash
 				{
 
 
-					//HashTable<K, T, hash> newht;
-					//newht.
+					closehash::HashTable<K, V, hash> newht;
+					newht._tables.resize(_tables.size() * 2);
 					/*std::vector<Node*> newht;
 					newht.resize(_tables.size() * 2);
 					for (size_t i = 0; i < _tables.size(); ++i)
