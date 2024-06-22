@@ -172,28 +172,34 @@ namespace buckethash
 
 
 	//前置声明
-	template<class K, class T, class hash, class KeyOfT>
+	template<class K, class T, class Hash, class KeyOfT>
 	class HashTable;
 
 	//为什么const迭代器没有复用？
-	template<class K, class T, class hash, class KeyOfT>
+	template<class K, class T, class Hash, class KeyOfT>
 	//迭代器
 	struct __HTiterator
 	{
 
 		//类型重定义
 		typedef HashNode<T> Node;
-		typedef __HTiterator<K, T, hash, KeyOfT> Self;
-		typedef HashTable<K, T, hash, KeyOfT> HT;
-
+		typedef __HTiterator<K, T, Hash, KeyOfT> Self;
+		typedef HashTable<K, T, Hash, KeyOfT> HT;
+		typedef __HTiterator<K, T, Hash, KeyOfT> Iterator;
 		Node* _node;
 		HT* _ht;
 
 		//初始化
-		__HTiterator(Node* node, HT* ht)
+		__HTiterator(const Node* node,const HT* ht)
 			:_node(node)
 			, _ht(ht)
 		{}
+
+		__HTiterator(const Iterator& it)
+		{
+			_node(it._node);
+			_ht(it._ht);
+		}
 		T& operator*()
 		{
 			return _node->_data;
@@ -218,8 +224,8 @@ namespace buckethash
 			else
 			{
 				KeyOfT kot;
-				hash hash;
-				size_t haxi = hash(kot(_node->_data)) % _ht->_tables.size();
+				Hash hash;
+				size_t haxi = Hash(kot(_node->_data)) % _ht->_tables.size();
 				++haxi;
 				while (haxi < _ht->_tables.size())
 				{
@@ -242,20 +248,21 @@ namespace buckethash
 			}
 			return *this;
 		}
-		template<class K, class T, class hash, class KeyOfT>
+		template<class K, class T, class Hash, class KeyOfT>
 		class HashTable
 		{
 			typedef HashNode<T> Node;
 			template<class K, class T, class Hash, class KeyOfT>
 			friend struct __HTiterator;
 		public:
-			typedef __HTiterator<K, T, hash, KeyOfT> iterator;
+			typedef __HTiterator<K, T, Hash, KeyOfT> iterator;
 
 			HashTable()
 				:_n(0)
 			{
 				_tables.resize(10);
 			}
+
 			iterator begin()
 			{
 				for (size_t i = 0; i < _tables.size(); ++i)
@@ -292,33 +299,100 @@ namespace buckethash
 			std::pair<iterator,bool> insert(const T& data)
 			{
 				KeyOfT kot;
-
 				iterator it = Find(kot(data));
 				if (it != end())
 				{
 					return std::make_pair(it, false);
 				}
 
-				//负载因子控制在1
+				//负载因子控制在1(不够就扩容)
 				if (_tables.size() == _n)
 				{
-
-
-					closehash::HashTable<K, V, hash> newht;
-					newht._tables.resize(_tables.size() * 2);
-					/*std::vector<Node*> newht;
-					newht.resize(_tables.size() * 2);
+					//创建新的哈希桶
+					std::vector<Node*> newht;
+					//将容量扩大至2倍
+					newht.resize(_tables.size() * 2,nullptr);
+					//遍历每个下表将其放入到新表中
 					for (size_t i = 0; i < _tables.size(); ++i)
 					{
 						Node* cur = _tables[i];
 						while (cur)
 						{
 							Node* next = cur->_next;
-							size_t haxi = hash(kot(cur->_data)) % newht.size();
-							
+							size_t haxi = Hash(kot(data)) % newht.size();
+
+							//头插到新表
+							cur->_next = newht[haxi];
+							newht[haxi] = cur;
+							cur = next;
 						}
-					}*/
+						_tables[i] = nullptr;
+					}
+					_tables.swap(newht);
 				}
+
+				//如果空间足够
+				size_t haxi = Hash(kot(data)) % _tables.size();
+				//头插
+				Node* newnode = new Node(data);
+				newnode->_next = _tables[haxi];
+				_tables[haxi] = newnode;
+				++_n;
+
+				return std::make_pair(iterator(newnode, this), true);
+			}
+
+
+			//查找
+			iterator Find(const K& key)
+			{
+				KeyOfT kot;
+				size_t haxi = Hash(kot(key)) % _tables.size();
+				Node* cur = _tables[haxi];
+				while (cur)
+				{
+					if (kot(cur->_data) == key)
+					{
+						return iterator(cur, this);
+					}
+					else
+					{
+						cur = cur->_next;
+					}
+				}
+				return end();
+			}
+
+			//删除
+			bool Erase(const K& key)
+			{
+				KeyOfT kot;
+				size_t haxi = Hash(key) % _tables.size();
+				Node* cur=_tables[haxi];
+				Node* prev=nullptr;
+				while (cur)
+				{
+					if (kot(cur->_data) == key)
+					{
+						if (cur = _tables[haxi])
+						{
+							_tables[haxi] = cur->_next;
+						}
+						else
+						{
+							prev->_next = cur->_next;
+						}
+						delete cur;
+						--_n;
+						return true;
+					}
+					else
+					{
+						prev = cur;
+						cur = cur->_next;
+					}
+				}
+				return false;
 			}
 		private:
 			std::vector<Node*> _tables; //指针数组
